@@ -2,6 +2,27 @@
 
 This project demonstrates the application of Radon transform and its inverse for line filtering in images. The implementation uses a Gaussian padding technique to enhance specific angular components in the frequency domain.
 
+## Example Result
+
+The process transforms an input image with line patterns through Radon transformation and reconstruction:
+
+<div align="center">
+  <table>
+    <tr>
+      <td><strong>Original Image</strong></td>
+      <td><strong>Sinogram</strong></td>
+      <td><strong>Reconstructed Image</strong></td>
+    </tr>
+    <tr>
+      <td><img src="https://raw.githubusercontent.com/bemoregt/LineFilteringUsingInverseRadonTransform/main/images/example_input.svg" width="200"></td>
+      <td><img src="https://raw.githubusercontent.com/bemoregt/LineFilteringUsingInverseRadonTransform/main/images/example_sinogram.svg" width="200"></td>
+      <td><img src="https://raw.githubusercontent.com/bemoregt/LineFilteringUsingInverseRadonTransform/main/images/example_reconstructed.svg" width="200"></td>
+    </tr>
+  </table>
+</div>
+
+Note how the Gaussian filtering in the sinogram domain selectively preserves certain linear features while suppressing others in the reconstructed image.
+
 ## Overview
 
 The Radon transform is a fundamental tool in image processing that maps a 2D image into a series of 1D projections along different angles. This transformation is particularly useful in highlighting linear features within an image. This application demonstrates:
