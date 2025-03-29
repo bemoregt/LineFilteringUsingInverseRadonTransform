@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="1536" height="512" viewBox="0 0 1536 512" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1536" height="512" fill="#f5f5f5"/>
+  
+  <!-- App window -->
+  <rect x="10" y="10" width="1516" height="492" rx="5" ry="5" fill="white" stroke="#cccccc" stroke-width="1"/>
+  
+  <!-- App title bar -->
+  <rect x="10" y="10" width="1516" height="30" rx="5" ry="5" fill="#e0e0e0"/>
+  <text x="768" y="30" font-family="Arial" font-size="14" text-anchor="middle" fill="#333333">Radon Transform with Gaussian Padding</text>
+  
+  <!-- Load Image button -->
+  <rect x="20" y="50" width="100" height="30" rx="3" ry="3" fill="#4285f4" stroke="#3367d6" stroke-width="1"/>
+  <text x="70" y="70" font-family="Arial" font-size="14" text-anchor="middle" fill="white">Load Image</text>
+  
+  <!-- Original Image Canvas -->
+  <rect x="20" y="90" width="512" height="512" fill="white" stroke="#dddddd" stroke-width="1"/>
+  <text x="276" y="350" font-family="Arial" font-size="14" text-anchor="middle" fill="#999999">Original Image</text>
+  <circle cx="276" cy="346" r="200" stroke="black" stroke-width="2" fill="none"/>
+  <line x1="76" y1="346" x2="476" y2="346" stroke="black" stroke-width="4"/>
+  <line x1="276" y1="146" x2="276" y2="546" stroke="black" stroke-width="4"/>
+  <line x1="126" y1="196" x2="426" y2="496" stroke="black" stroke-width="4"/>
+  <line x1="426" y1="196" x2="126" y2="496" stroke="black" stroke-width="4"/>
+  <circle cx="276" cy="346" r="100" stroke="black" stroke-width="2" fill="none"/>
+  
+  <!-- Sinogram Canvas -->
+  <rect x="542" y="90" width="512" height="512" fill="white" stroke="#dddddd" stroke-width="1"/>
+  <text x="798" y="350" font-family="Arial" font-size="14" text-anchor="middle" fill="#999999">Sinogram</text>
+  <path d="M 592,146 Q 692,346 592,546" stroke="black" stroke-width="4" fill="none"/>
+  <path d="M 692,146 Q 792,346 692,546" stroke="black" stroke-width="4" fill="none"/>
+  <path d="M 792,146 Q 892,346 792,546" stroke="black" stroke-width="4" fill="none"/>
+  <path d="M 892,146 Q 992,346 892,546" stroke="black" stroke-width="4" fill="none"/>
+  <path d="M 992,146 Q 798,246 604,146" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 992,246 Q 798,346 604,246" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 992,346 Q 798,446 604,346" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M 992,446 Q 798,546 604,446" stroke="black" stroke-width="2" fill="none"/>
+  
+  <!-- Reconstructed Image Canvas -->
+  <rect x="1064" y="90" width="512" height="512" fill="white" stroke="#dddddd" stroke-width="1"/>
+  <text x="1320" y="350" font-family="Arial" font-size="14" text-anchor="middle" fill="#999999">Reconstructed Image</text>
+  <circle cx="1320" cy="346" r="200" stroke="black" stroke-width="1" fill="none" stroke-dasharray="5,5"/>
+  <line x1="1120" y1="346" x2="1520" y2="346" stroke="black" stroke-width="3"/>
+  <line x1="1320" y1="146" x2="1320" y2="546" stroke="black" stroke-width="3"/>
+  <line x1="1170" y1="196" x2="1470" y2="496" stroke="black" stroke-width="1" stroke-dasharray="2,2"/>
+  <line x1="1470" y1="196" x2="1170" y2="496" stroke="black" stroke-width="1" stroke-dasharray="2,2"/>
+  <circle cx="1320" cy="346" r="100" stroke="black" stroke-width="1" fill="none" stroke-dasharray="5,5"/>
+  <circle cx="1320" cy="346" r="50" stroke="none" fill="rgba(0,0,0,0.1)"/>
+</svg>
