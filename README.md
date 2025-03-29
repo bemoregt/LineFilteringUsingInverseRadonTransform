@@ -23,6 +23,14 @@ The process transforms an input image with line patterns through Radon transform
 
 Note how the Gaussian filtering in the sinogram domain selectively preserves certain linear features while suppressing others in the reconstructed image.
 
+## Application Screenshot
+
+The application provides a simple GUI to visualize the transformation process:
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/bemoregt/LineFilteringUsingInverseRadonTransform/main/images/app_screenshot.svg" width="800">
+</div>
+
 ## Overview
 
 The Radon transform is a fundamental tool in image processing that maps a 2D image into a series of 1D projections along different angles. This transformation is particularly useful in highlighting linear features within an image. This application demonstrates:
