@@ -37,7 +37,12 @@ Filtered Sinogram             Reconstructed Image
 
 *This diagram illustrates how the Gaussian filtering in the sinogram domain can selectively enhance horizontal lines while suppressing vertical lines.*
 
-For more detailed examples, see the [concept diagrams](samples/concept_diagram.md) in the samples directory.
+## Documentation
+
+- [Concept Diagrams](samples/concept_diagram.md) - Visual explanation of the Radon transform
+- [Example Workflow](samples/example_workflow.md) - Step-by-step illustration of the process
+- [Mathematical Foundation](doc/mathematical_foundation.md) - Detailed explanation of the underlying math
+- [Sample Demonstrations](samples/demo.md) - Expected results when using the application
 
 ## Overview
 
@@ -61,8 +66,6 @@ When running the application, you will see a window with three panels:
 - Left panel: Original input image
 - Middle panel: Radon transform sinogram (possibly with Gaussian filtering applied)
 - Right panel: Reconstructed image showing the enhanced/suppressed linear features
-
-See the [samples directory](samples/demo.md) for a demonstration of expected results.
 
 ## Requirements
 
@@ -117,6 +120,8 @@ Where:
 - δ is the Dirac delta function
 
 The inverse Radon transform reconstructs the original function from its projections.
+
+For a deeper explanation of the mathematical principles, see the [Mathematical Foundation](doc/mathematical_foundation.md) document.
 
 ## Applications
 
