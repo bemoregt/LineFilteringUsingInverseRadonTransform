@@ -2,40 +2,11 @@
 
 This project demonstrates the application of Radon transform and its inverse for line filtering in images. The implementation uses a Gaussian padding technique to enhance specific angular components in the frequency domain.
 
-## Concept Visualization
+## Application Example
 
-The Radon transform and inverse transform process can be visualized as follows:
+![Line Filtering Using Inverse Radon Transform](iradon.png)
 
-```
-Original Image              Radon Transform (Sinogram)
-+---------------+           +---------------+
-|       |       |           |     /|\      |
-|       |       |           |    / | \     |
-|       |       |           |   /  |  \    |
-|-------|-------|    ==>    |  /   |   \   |
-|       |       |           | /    |    \  |
-|       |       |           |/     |     \ |
-|       |       |           +---------------+
-+---------------+             Angle vs. Distance
-
-                                   ||
-                                   \/
-
-Filtered Sinogram             Reconstructed Image
-+---------------+           +---------------+
-|     /|\      |           |       |       |
-|    / | \     |           |       |       |
-|     |        |           |       |       |
-|     |        |    ==>    |-------|       |
-|     |        |           |       |       |
-|     |        |           |       |       |
-|     |        |           |       |       |
-+---------------+           +---------------+
- (After Gaussian              (Horizontal line
-  mask applied)                emphasized)
-```
-
-*This diagram illustrates how the Gaussian filtering in the sinogram domain can selectively enhance horizontal lines while suppressing vertical lines.*
+*The image shows the application in action: original image (left), sinogram with Gaussian mask applied (middle), and the reconstructed image (right).*
 
 ## Documentation
 
