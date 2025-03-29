@@ -2,34 +2,42 @@
 
 This project demonstrates the application of Radon transform and its inverse for line filtering in images. The implementation uses a Gaussian padding technique to enhance specific angular components in the frequency domain.
 
-## Example Result
+## Concept Visualization
 
-The process transforms an input image with line patterns through Radon transformation and reconstruction:
+The Radon transform and inverse transform process can be visualized as follows:
 
-<div align="center">
-  <table>
-    <tr>
-      <td><strong>Original Image</strong></td>
-      <td><strong>Sinogram</strong></td>
-      <td><strong>Reconstructed Image</strong></td>
-    </tr>
-    <tr>
-      <td><img src="https://raw.githubusercontent.com/bemoregt/LineFilteringUsingInverseRadonTransform/main/images/example_input.svg" width="200"></td>
-      <td><img src="https://raw.githubusercontent.com/bemoregt/LineFilteringUsingInverseRadonTransform/main/images/example_sinogram.svg" width="200"></td>
-      <td><img src="https://raw.githubusercontent.com/bemoregt/LineFilteringUsingInverseRadonTransform/main/images/example_reconstructed.svg" width="200"></td>
-    </tr>
-  </table>
-</div>
+```
+Original Image              Radon Transform (Sinogram)
++---------------+           +---------------+
+|       |       |           |     /|\      |
+|       |       |           |    / | \     |
+|       |       |           |   /  |  \    |
+|-------|-------|    ==>    |  /   |   \   |
+|       |       |           | /    |    \  |
+|       |       |           |/     |     \ |
+|       |       |           +---------------+
++---------------+             Angle vs. Distance
 
-Note how the Gaussian filtering in the sinogram domain selectively preserves certain linear features while suppressing others in the reconstructed image.
+                                   ||
+                                   \/
 
-## Application Screenshot
+Filtered Sinogram             Reconstructed Image
++---------------+           +---------------+
+|     /|\      |           |       |       |
+|    / | \     |           |       |       |
+|     |        |           |       |       |
+|     |        |    ==>    |-------|       |
+|     |        |           |       |       |
+|     |        |           |       |       |
+|     |        |           |       |       |
++---------------+           +---------------+
+ (After Gaussian              (Horizontal line
+  mask applied)                emphasized)
+```
 
-The application provides a simple GUI to visualize the transformation process:
+*This diagram illustrates how the Gaussian filtering in the sinogram domain can selectively enhance horizontal lines while suppressing vertical lines.*
 
-<div align="center">
-  <img src="https://raw.githubusercontent.com/bemoregt/LineFilteringUsingInverseRadonTransform/main/images/app_screenshot.svg" width="800">
-</div>
+For more detailed examples, see the [concept diagrams](samples/concept_diagram.md) in the samples directory.
 
 ## Overview
 
@@ -47,6 +55,15 @@ The Radon transform is a fundamental tool in image processing that maps a 2D ima
 - Reconstruct filtered images using inverse Radon transform
 - Side-by-side visualization of original, sinogram, and reconstructed images
 
+## Application Interface
+
+When running the application, you will see a window with three panels:
+- Left panel: Original input image
+- Middle panel: Radon transform sinogram (possibly with Gaussian filtering applied)
+- Right panel: Reconstructed image showing the enhanced/suppressed linear features
+
+See the [samples directory](samples/demo.md) for a demonstration of expected results.
+
 ## Requirements
 
 - Python 3.x
@@ -60,7 +77,7 @@ The Radon transform is a fundamental tool in image processing that maps a 2D ima
 ## Installation
 
 ```bash
-pip install numpy pillow scikit-image matplotlib scipy
+pip install -r requirements.txt
 ```
 
 Tkinter usually comes pre-installed with Python. If not, you can install it separately.
